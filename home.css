@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+/* navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px silver;
+}
+
+/* logo */
+.nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.nav .logo img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.nav .logo p {
+    font-size: 20px;
+}
+
+/* profile */
+.nav .profile {
+    height: 48px;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    padding: 3px 9px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 10px;
+    margin-right: 100px;
+}
+
+.nav .profile a {
+    display: flex;
+}
+
+.nav .profile a img {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.nav .profile a p {
+    line-height: 15px;
+    color: black;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+    margin-top: 2.5px;
+}
+
+.nav .profile a p .username {
+    font-weight: 500;
+    color: #587DC7;
+}
+
+.nav .profile .logout-btn {
+    color: black;
+    background-color: #fff;
+    border-radius: 4px;
+    height: 35px;
+    width: 35px;
+}
+
+.nav .profile .logout-btn :hover {
+    color: #D22F3F;
+    transform: scale(1.02);
+}
+
+.nav .profile .logout-btn a span {
+    font-size: 25px;
+    margin: 5px 0 0 7px;
+    color: #57B0A2;
+}
+
+/* body */
+.content {
+    margin: 100px 10px 10px 10px;
+    height: 200vh;
+}
+
+/* side bar left */
+.content .side-bar-left {
+    box-shadow: 1px 1px 20px #dedede;
+    border-radius: 7px;
+    position: fixed;
+    margin: 0 15px 25px 100px;
+    width: 280px;
+    height: 87.5vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+}
+
+.content .side-bar-left .side-profile {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content .side-bar-left .side-profile img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.content .side-bar-left .side-profile .side-bar-fullname {
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.content .side-bar-left .side-profile .side-bar-username {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-family: Inter;
+    font-weight: 500;
+    color: #587DC7;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn div {
+    background-color: #dedede;
+    font-family: Inter;
+    cursor: pointer;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    height: 40px;
+    width: 150px;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn p {
+    color: #F59F34;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn div a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #0e0e0e;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn div a span {
+    font-size: 25px;
+    font-weight: 300px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn .btn-1:hover {
+    background-color: #587DC7;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn .btn-2:hover {
+    background-color: #57B0A2;
+}
+
+.content .side-bar-left .side-profile .side-bar-btn .btn-3:hover {
+    background-color: #D22F3F;
+}
+
+.content .side-bar-left .side-bar-links {
+    margin-top: 160px;
+}
+
+.content .side-bar-left .side-bar-links a {
+    gap: 30px;
+    cursor: pointer;
+    color: #F59F34;
+}
+
+.content .side-bar-left .side-bar-links a:hover {
+    color: #ffc37a;
+}
+
+.content .side-bar-left .side-bar-links p {
+    margin-top: 10px;
+    color: #D22F3F;
+}
+
+
+/* center area */
+.content .center-area {
+    margin: 70px 500px 10px 500px;
+    background-color: white;
+}
+
+.content .center-area .card {
+    margin-bottom: 50px;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px silver;
+}
+
+.content .center-area .card .top {
+    height: 90px;
+}
+
+.content .center-area .card .top .top-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.content .center-area .card .top .top-wrapper img {
+    margin-left: 10px;
+    margin-right: 15px;
+    border: 3px solid #587DC7;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.content .center-area .card .top .top-wrapper .username a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Inter;
+}
+
+.content .center-area .card .top .top-wrapper .username a:hover{
+    color: #0056b3;
+}
+
+.content .center-area .card .top .top-wrapper .time {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.content .center-area .card .top .caption {
+    margin: 5px 0 10px 10px;
+}
+
+.content .center-area .card .photo-area img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.content .center-area .card .bottom {
+    margin: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .center-area .card .bottom .love-wrapper, .content .center-area .card .bottom .comment-wrapper {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* side bar right */
+.content .side-bar-right {
+    right: 0;
+    top: 0;
+    margin: 100px 100px 15px 15px;
+    background-color: white;
+    box-shadow: 1px 1px 20px #dedede;
+    border-radius: 7px;
+    position: fixed;
+    width: 280px;
+    height: 87.5vh;
+}
+
+.content .side-bar-right {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content .side-bar-right .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .side-bar-right .form-section p {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content .side-bar-right .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content .side-bar-right .form-section form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    outline: none;
+}
+
+.content .side-bar-right .form-section form #file-name {
+    width: 250px;
+    overflow: scroll;
+    font-size: 15px;
+    color: #ffc37a;
+}
+
+.content .side-bar-right .form-section form input[type="file"] {
+    color: transparent;
+    display: none;
+}
+
+.content .side-bar-right .form-section form label[for="file"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #587DC7;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content .side-bar-right .form-section form label[for="file"]:hover {
+    background-color: #6092f7;
+}
+
+.content .side-bar-right .form-section form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #57B0A2;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content .side-bar-right .form-section form input[type="submit"]:hover {
+    background-color: #66d8c7;
+}
+
+.content .side-bar-right .form-section .other-projects {
+    height: 320px;
+}
+
+.content .side-bar-right .form-section .other-projects p {
+    font-family: Inter;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.content .side-bar-right .form-section .other-projects div {
+    margin-bottom: 10px;
+}
+
+.content .side-bar-right .form-section .other-projects a {
+    color: #587DC7;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.content .side-bar-right .form-section .other-projects a:hover {
+    color: #0056b3;
+}
+
+.content .side-bar-right .form-section .copy p {
+    font-size: 15px;
+    font-family: Inter;
+    color: #F59F34;
+    text-align: center;
+}
+
+/* fotovista logo spin */
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+
+    ;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+
+    ;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+
+    ;
+}
+
+
+
+/* responsive */
+@media (max-width: 600px) {
+
+    .content .side-bar-left {
+        display: none;
+    }
+
+    .content {
+        left: 1;
+        top: 1;
+        margin: 70px 5px 5px 5px;
+    }
+
+    .content .side-bar-right {
+        display: none;
+    }
+
+
+}
