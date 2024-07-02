@@ -124,6 +124,9 @@ if ($_SESSION['logged_in']) {
                     margin: 5px 0 0 5px;
                     color: #57B0A2;
                 }
+                .nav .profile .setting {
+                        display: none;
+                }
 
 
                 /* profile-section */
@@ -269,6 +272,37 @@ if ($_SESSION['logged_in']) {
                     gap: 10px;
                     cursor: pointer;
                 }
+                
+                /* responsive */
+                @media (max-width: 600px) {
+                    
+                    .nav {
+                        width: 100%;
+                        padding: 0 10px;
+                    }
+
+                    .nav .logo {
+                        margin-left: 0px;
+                    }
+
+                    .nav .profile {
+                        margin-left: 20px;
+                        margin-right: 0px;
+                    }
+
+                    .nav .profile .setting {
+                        display: flex;
+                        margin-right: 10px;
+                    }
+
+                    .profile-wrapper .profile-section .btn{
+                        width: 80px;
+                    }
+                    .profile-wrapper{
+                        width: 360px;
+                    }
+                }
+
 
                 /* fotovista logo spin */
                 @-webkit-keyframes spin {
@@ -308,6 +342,9 @@ if ($_SESSION['logged_in']) {
                         <img src="<?php echo $image_path ?>">
                         <p> K xa sathi ! <br><span class="username">@<?php echo $_SESSION['username'] ?></span></p>
                     </a>
+                    <div class="logout-btn setting">
+                        <a href="setting.php?username=<?php echo $_SESSION['username']?>"><span class="material-symbols-outlined">settings</span></a>    
+                    </div>
                     <div class="logout-btn">
                         <a href="home.php"><span class="material-symbols-outlined">home</span></a>
                     </div>

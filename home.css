@@ -97,6 +97,10 @@
     color: #57B0A2;
 }
 
+.nav .profile .setting {
+    display: none;
+}
+
 /* body */
 .content {
     margin: 100px 10px 10px 10px;
@@ -209,6 +213,10 @@
 
 
 /* center area */
+.content .center-area .mobile-view {
+    display: none;
+}
+
 .content .center-area {
     margin: 70px 500px 10px 500px;
     background-color: white;
@@ -247,7 +255,7 @@
     font-family: Inter;
 }
 
-.content .center-area .card .top .top-wrapper .username a:hover{
+.content .center-area .card .top .top-wrapper .username a:hover {
     color: #0056b3;
 }
 
@@ -438,19 +446,104 @@
 /* responsive */
 @media (max-width: 600px) {
 
+    .nav {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .nav .logo {
+        margin-left: 0px;
+    }
+
+    .nav .profile {
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .nav .profile .setting {
+        display: flex;
+        margin-right: 5px;
+    }
+
     .content .side-bar-left {
         display: none;
     }
 
-    .content {
-        left: 1;
-        top: 1;
-        margin: 70px 5px 5px 5px;
+    .content .center-area {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .content .center-area .card {
+        width: 390px;
+        margin-bottom: 20px;
     }
 
     .content .side-bar-right {
         display: none;
     }
+
+    .content .center-area .mobile-view {
+        display: flex;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .form-row input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    .form-row input[type="file"] {
+        display: none;
+    }
+
+    .file-label {
+        color: #ff8c00;
+        font-size: 0.9em;
+        margin-right: 10px;
+    }
+
+    .file-btn {
+        padding: 10px 20px;
+        background-color: #587DC7;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .btn-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .post-btn {
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .green-btn {
+        background-color: #57B0A2;
+    }
+
+    .post-btn:hover, .file-btn:hover {
+        opacity: 0.9;
+    }
+
 
 
 }

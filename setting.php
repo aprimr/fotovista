@@ -222,7 +222,22 @@ if ($_SESSION['logged_in'] && $_GET['username']) {
                     background-color: #65d0c0;
                     
                 }
-                
+
+                /* responsive */
+                @media (max-width: 600px) {
+                    
+                    .nav{
+                        width: 100%;
+                        padding: 0 10px;
+                    }
+                    .nav .logo{
+                        margin-left: 0px;
+                    }
+                    .nav .profile{
+                        margin-left: 20px;
+                        margin-right: 0px;
+                    }
+                }
 
                 /*  */
                 /* fotovista logo spin */

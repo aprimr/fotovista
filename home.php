@@ -50,9 +50,13 @@ $image_path = $_SESSION['image_path'];
                 <img src="<?php echo $image_path ?>">
                 <p> K xa sathi ! <br><span class="username">@<?php echo $_SESSION['username'] ?></span></p>
             </a>
-            <div class="logout-btn">
-                <a href="logout.php"><span class="material-symbols-outlined">logout</span></a>
+            <div class="logout-btn setting">
+            <a href="setting.php?username=<?php echo $_SESSION['username']?>"><span class="material-symbols-outlined">settings</span></a>    
             </div>
+            <div class="logout-btn">
+            <a href="logout.php"><span class="material-symbols-outlined">logout</span></a>
+            </div>
+            
         </div>
     </div>
 
@@ -93,6 +97,22 @@ $image_path = $_SESSION['image_path'];
         ?>
     
         <div class="center-area">
+            <div class="card mobile-view">
+                <form method="post" action="home.php" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <input type="text" id="caption" name="caption" placeholder="Write a caption." autocomplete="off" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="file" name="image" class="file" id="file" accept="image/png" required>
+                        <span id="file-name" class="file-label">No file chosen.</span>
+                    </div>
+                    <div class="btn-row">
+                        <label for="file" class="file-btn" id="file-btn">Upload File</label>
+                        <input class="post-btn green-btn" name="post-btn" type="submit" value="Post">
+                    </div>
+                </form>
+            </div>
+
             <?php 
             foreach ($posts as $post): 
                 $_SESSION['post_id'] = $post['post_id'];
