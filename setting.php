@@ -2,19 +2,20 @@
 include 'connection.php';
 include 'extras/calc-time.php';
 session_start();
-if ($_SESSION['logged_in'] && $_GET['username']) {
+if ($_SESSION['logged_in'] && $_GET['username']  ) {
 
     $username = $_GET['username'];
     $password = $_SESSION['password'];
+    
     $image_path = $_SESSION['image_path'];
     //fetch profile data from db
     $fetch = "SELECT * FROM registered_users WHERE `username` = '$username' ";
     $fetch_result = mysqli_query($conn, $fetch);
 
     while ($row = mysqli_fetch_array($fetch_result)) {
-        $password = $row['password'];
-        $_SESSION['password'] = $password;
-
+            $password = $row['password'] ;
+            $_SESSION['password'] = $password;
+        
         ?>
 
         <!DOCTYPE html>
